@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* Brand Colors */
+  --color-brand-primary: #000000;
+  --color-brand-accent: #FF670B;
+  --color-brand-surface: #111111;
+  --color-brand-light: #FFFFFF;
+
+  /* Theme Defaults */
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+  --color-card: #111111;
+  --color-card-foreground: #FFFFFF;
+  --color-popover: #111111;
+  --color-popover-foreground: #FFFFFF;
+  --color-primary: #FF670B;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #a0a0a0;
+  --color-accent: #FF670B;
+  --color-accent-foreground: #FFFFFF;
+  --color-destructive: #ff0000;
+  --color-border: #333333;
+  --color-input: #333333;
+  --color-ring: #FF670B;
+
+  /* Sidebar */
+  --color-sidebar: oklch(0.205 0 0);
+  --color-sidebar-foreground: oklch(0.985 0 0);
+  --color-sidebar-primary: oklch(0.488 0.243 264.376);
+  --color-sidebar-primary-foreground: oklch(0.985 0 0);
+  --color-sidebar-accent: oklch(0.269 0 0);
+  --color-sidebar-accent-foreground: oklch(0.985 0 0);
+  --color-sidebar-border: oklch(1 0 0 / 10%);
+  --color-sidebar-ring: oklch(0.556 0 0);
+
+  /* Radius */
+  --radius-sm: calc(0.625rem * 0.6);
+  --radius-md: calc(0.625rem * 0.8);
+  --radius-lg: 0.625rem;
+  --radius-xl: calc(0.625rem * 1.4);
+  --radius-2xl: calc(0.625rem * 1.8);
+  --radius-3xl: calc(0.625rem * 2.2);
+  --radius-4xl: calc(0.625rem * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brand-accent) var(--color-brand-primary);
+  }
+
+  /* Custom Scrollbar (WebKit) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-accent);
+    border-radius: 5px;
+  }
+
+  /* Selection Style */
+  ::selection {
+    background-color: var(--color-brand-accent);
+    color: #ffffff;
+  }
+}
