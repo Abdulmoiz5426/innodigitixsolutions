@@ -15,6 +15,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "InnoDigitix Solutions | Digital Marketing Agency",
   description: "Modern and professional digital marketing agency website for InnoDigitix Solutions.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
