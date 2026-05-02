@@ -40,7 +40,7 @@ export default function Home() {
             Grow Your Business with <span className="text-[#FF670B]">Powerful Digital Solutions</span>
           </motion.h1>
           <motion.p variants={fadeUp} className="text-lg md:text-2xl text-gray-400 mb-10 max-w-4xl mx-auto">
-            We help brands scale faster through result driven digital marketing and high-performance web & app development.
+            We help brands scale faster through result driven digital marketing and high performance web & app development.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="px-8 py-4 bg-[#FF670B] hover:bg-[#ff7a2b] text-white font-semibold rounded-full shadow-lg shadow-[#FF670B]/30 hover:scale-105 transition-all flex items-center justify-center gap-2">
